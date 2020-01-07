@@ -93,3 +93,11 @@ print(f"Total: ${net_amount}")
 print(f"Average Change: ${avg_chg}")
 print(f"Greatest Increase in Profits: {dates[25]} {max_chg}")
 print(f"Greatest Decrease in Profits: {dates[44]} {min_chg}")
+
+with open ('PyBank_Final',"w") as txt_file:
+    txt_file.writer(f'Financial Analysis\n')
+    txt_file.writer(f'--------------------\n')
+    txt_file.writer(f'Total Months: {count_profit_loss}\n')
+    txt_file.writer(f'Total: ${net_amount}\n')
+    txt_file.writer(f'Average Change: ${avg_chg}\n')
+    txt_file.writer(f'Greatest Increase in Profits: {dates[25]}{max_chg}\n')
