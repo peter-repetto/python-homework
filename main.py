@@ -94,10 +94,15 @@ print(f"Average Change: ${avg_chg}")
 print(f"Greatest Increase in Profits: {dates[25]} {max_chg}")
 print(f"Greatest Decrease in Profits: {dates[44]} {min_chg}")
 
-with open ('PyBank_Final',"w") as txt_file:
-    txt_file.writer(f'Financial Analysis\n')
-    txt_file.writer(f'--------------------\n')
-    txt_file.writer(f'Total Months: {count_profit_loss}\n')
-    txt_file.writer(f'Total: ${net_amount}\n')
-    txt_file.writer(f'Average Change: ${avg_chg}\n')
-    txt_file.writer(f'Greatest Increase in Profits: {dates[25]}{max_chg}\n')
+#Set File Path Output
+file_path_output = Path('Python/github/python-homework/PyBank_Final.txt')
+
+#Write the Output into a TXT file
+with open (file_path_output,'w') as txt_file:
+    txt_file.write("Financial Analysis\n")
+    txt_file.write("--------------------\n")
+    txt_file.write(f'Total Months: {count_profit_loss}\n')
+    txt_file.write(f'Total: ${net_amount}\n')
+    txt_file.write(f'Average Change: ${avg_chg}\n')
+    txt_file.write(f'Greatest Increase in Profits: {dates[25]} {max_chg}\n')
+    txt_file.write(f'Greatest Decrease in Profits: {dates[44]} {min_chg}\n')
